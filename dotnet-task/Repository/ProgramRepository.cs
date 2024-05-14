@@ -1,4 +1,5 @@
 ﻿using dotnet_task.Domain.Models;
+using dotnet_task.Exceptions;
 using Microsoft.Azure.Cosmos;
 
 namespace dotnet_task.Repository
@@ -41,7 +42,7 @@ namespace dotnet_task.Repository
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                return null;
+                throw new CustomException("An internal server error occured");
             }
         }
 
