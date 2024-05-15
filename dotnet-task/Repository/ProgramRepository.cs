@@ -18,7 +18,7 @@ namespace dotnet_task.Repository
             var databaseResponse = cosmosClient.CreateDatabaseIfNotExistsAsync(databaseName).GetAwaiter().GetResult();
 
             // Check if the container exists, if not, create it
-            databaseResponse.Database.CreateContainerIfNotExistsAsync(containerName, "/id").GetAwaiter().GetResult();
+           databaseResponse.Database.CreateContainerIfNotExistsAsync(containerName, "/id").GetAwaiter().GetResult();
         }
 
         public async Task<IEnumerable<InternshipProgram>> GetProgramsAsync()

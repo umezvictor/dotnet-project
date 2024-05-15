@@ -20,7 +20,9 @@ namespace dotnet_task.Controllers
         }
 
 
-        // GET: api/<ProgramController>
+        /// <summary>
+        /// Returns all the programs created by the employer.
+        /// </summary>       
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(Response<List<InternshipProgramDto>>))]
         public async Task<IActionResult> GetPrograms()
@@ -28,7 +30,10 @@ namespace dotnet_task.Controllers
             return Ok(await _programService.GetPrograms());
         }
 
-        // GET api/<ProgramController>/5
+
+        /// <summary>
+        /// Returns a single program.
+        /// </summary> 
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Response<InternshipProgramDto>))]    
         public async Task<ActionResult> Get(string id)
@@ -37,7 +42,10 @@ namespace dotnet_task.Controllers
             
         }
 
-              
+        /// <summary>
+        /// saves program created by employer.
+        /// question type must be any of these: Paragraph, YesNo, Dropdown, MultipleChoice, Date, Number 
+        /// </summary>
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(Response<InternshipProgramDto>))]
         public async Task<ActionResult> Post([FromBody] CreateProgramDto programDto)
@@ -48,7 +56,9 @@ namespace dotnet_task.Controllers
             return BadRequest(response);
         }
 
-       
+        /// <summary>
+        /// updates a question after a program has been created.
+        /// </summary>
         [HttpPut("question")]     
         [ProducesResponseType(200, Type = typeof(Response<string>))]
         public async Task<ActionResult> Put([FromBody] EditQuestionDto editQuestionDto)
@@ -60,7 +70,9 @@ namespace dotnet_task.Controllers
         }
 
 
-       
+        /// <summary>
+        /// saves input by candidate after he or she applies
+        /// </summary>
         [HttpPost("apply")]
         [ProducesResponseType(200, Type = typeof(Response<ApplicationDto>))]
         public async Task<ActionResult> Apply([FromBody] CreateApplicationDto applicationDto)

@@ -25,18 +25,21 @@ var containerName = cosmosSettings["ContainerName"];
 builder.Services.AddSingleton<IProgramRepository>((provider) =>
 {
     var cosmosClient = new CosmosClient(endpointUri, primaryKey);
-    return new ProgramRepository(cosmosClient, databaseName, containerName);
+    return new ProgramRepository(cosmosClient, databaseName!, containerName!);
 });
 
 
 builder.Services.AddSingleton<IApplicationRepository>((provider) =>
 {
     var cosmosClient = new CosmosClient(endpointUri, primaryKey);
-    return new ApplicationRepository(cosmosClient, databaseName, containerName);
+    return new ApplicationRepository(cosmosClient, databaseName!, containerName!);
 });
+
+
 
 builder.Services.AddTransient<IApplicationService, ApplicationService>();
 builder.Services.AddTransient<IProgramService, ProgramService>();
+
 
 var app = builder.Build();
 

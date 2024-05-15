@@ -15,11 +15,7 @@ namespace dotnet_task.Mappings
 
             CreateMap<QuestionDto, Question>();
             CreateMap<Question, QuestionDto>();
-
-            //CreateMap<InternshipProgram, InternshipProgramDto>()
-            //    .ForMember(dest => dest.Id, opt => opt.Ignore()); 
-            //CreateMap<InternshipProgramDto, InternshipProgram>(); 
-
+          
             CreateMap<InternshipProgram, InternshipProgramDto>();
                
             CreateMap<InternshipProgramDto, InternshipProgram>();
@@ -29,8 +25,6 @@ namespace dotnet_task.Mappings
             CreateMap<CreateProgramDto, InternshipProgram>();
                
             CreateMap<InternshipProgram, CreateProgramDto>();
-
-
            
             CreateMap<Answer, Answer>();
             CreateMap<AnswerDto, Answer>();
