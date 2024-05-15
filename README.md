@@ -10,7 +10,7 @@
 https://github.com/umezvictor/dotnet-project.git
 ```
 
-<p>2. Database configuration</p>
+<p>2. Database configuration (add this to your appsettings.json and enter your cosmos db credentials)</p>
 
 ```
 "CosmosDB": {   "EndpointUri": ""   "PrimaryKey": ""   "DatabaseName": ""   "ContainerName": "" }
