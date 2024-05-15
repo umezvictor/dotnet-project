@@ -1,9 +1,9 @@
 "# dotnet-project" 
 
-#Installation
+Installation
 clone the repository
 
-#Database Configuration
+Database Configuration
 Add this section to your appsettings.json file and enter your Cosmos DB credentials
 
 "CosmosDB": { "EndpointUri": "", "PrimaryKey": "", "DatabaseName": "", "ContainerName": "" }
@@ -53,7 +53,6 @@ Paragraph, YesNo, Dropdown, MultipleChoice, Date, Number
 }
 
 #Sample payload for applying for a program as a candidate
-
 
 {
   "programTitle": "Winter Scholarship Program",
