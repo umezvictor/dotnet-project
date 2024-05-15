@@ -11,9 +11,12 @@ namespace dotnet_task.Domain.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("programId")]
-        public string ProgramId { get; set; }
-      
+        [JsonProperty("programTitle")]
+        public string ProgramTitle { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
         [JsonProperty("personalInformation")]
         public Dictionary<string, List<Answer>> PersonalInformation { get; set; }
 

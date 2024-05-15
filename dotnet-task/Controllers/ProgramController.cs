@@ -37,7 +37,7 @@ namespace dotnet_task.Controllers
             
         }
 
-        // POST api/<ProgramController>
+              
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(Response<InternshipProgramDto>))]
         public async Task<ActionResult> Post([FromBody] CreateProgramDto programDto)
@@ -48,8 +48,8 @@ namespace dotnet_task.Controllers
             return BadRequest(response);
         }
 
-        // PUT api/<ProgramController>/5
-        [HttpPut]     
+       
+        [HttpPut("question")]     
         [ProducesResponseType(200, Type = typeof(Response<string>))]
         public async Task<ActionResult> Put([FromBody] EditQuestionDto editQuestionDto)
         {
@@ -60,7 +60,7 @@ namespace dotnet_task.Controllers
         }
 
 
-        // POST api/<ProgramController>
+       
         [HttpPost("apply")]
         [ProducesResponseType(200, Type = typeof(Response<ApplicationDto>))]
         public async Task<ActionResult> Apply([FromBody] CreateApplicationDto applicationDto)

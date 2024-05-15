@@ -7,8 +7,7 @@ namespace dotnet_task.Domain.Models
         public InternshipProgram()
         {
             Id = Guid.NewGuid().ToString();
-            PersonalInformation = new Dictionary<string, List<Question>>();
-            AdditionalQuestions = new Dictionary<string, List<Question>>();
+            
         }
 
         [JsonProperty("id")]

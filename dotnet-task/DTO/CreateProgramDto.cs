@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace dotnet_task.DTO
 {
+
     public class CreateProgramDto
     {
         [Required]
@@ -13,9 +14,9 @@ namespace dotnet_task.DTO
         public string Description { get; set; }
 
         [Required]
-        public Dictionary<string, List<Question>> PersonalInformation { get; set; }
+        public Dictionary<string, List<QuestionDto>> PersonalInformation { get; set; }
 
         [Required]
-        public Dictionary<string, List<Question>> AdditionalQuestions { get; set; }
+        public Dictionary<string, List<QuestionDto>> AdditionalQuestions { get; set; }
     }
 }
