@@ -13,7 +13,13 @@ https://github.com/umezvictor/dotnet-project.git
 <p>2. Database configuration (add this to your appsettings.json and enter your cosmos db credentials)</p>
 
 ```
-"CosmosDB": {   "EndpointUri": ""   "PrimaryKey": ""   "DatabaseName": ""   "ContainerName": "" }
+"CosmosDB": {
+  "EndpointUri": "",
+  "PrimaryKey": "",
+  "DatabaseName": "",
+  "ContainerName": ""
+}
+
 ```
 
 <p>3. Question types (case sensitive)</p>
