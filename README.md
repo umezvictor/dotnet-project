@@ -49,4 +49,4 @@ Technologies used in the project:
 *   .Net 8.0
 *   Cosmos DB SDK
 
-<h2>💖Like my work?</h2>
+<h2>Built with 💖 by Chibuzor Umezuruike</h2>
